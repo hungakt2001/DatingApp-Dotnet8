@@ -6,9 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
-[ApiController]
-[Route("api/[controller]")] //API User
-public class UserController(DataContext context) : ControllerBase
+
+public class UserController(DataContext context) : BaseAPIController
 {
 
     [HttpGet]

@@ -24,12 +24,12 @@ if (app.Environment.IsDevelopment())
                 options.SwaggerEndpoint("/openapi/v1.json", "OpenAPI V1");
             });
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod()
     .WithOrigins("http://localhost:4200", "https://localhost:4200"));
 app.MapControllers();
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
 
 app.Run();
