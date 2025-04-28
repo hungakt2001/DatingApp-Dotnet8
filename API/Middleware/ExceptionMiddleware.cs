@@ -32,7 +32,7 @@ namespace API.Middleware
                 };
 
                 var json = JsonSerializer.Serialize(response, options);
-                await context.Response.WriteAsJsonAsync(json);
+                await context.Response.WriteAsync(json);
 
             }
         }
